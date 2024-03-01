@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire SAV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="form-sav" onsubmit="event.preventDefault(); submitForm();">
+        <h2>Formulaire SAV</h2>
+        <div class="input-group">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+        </div>
+        <div class="input-group">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>
+        <div class="input-group">
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+        </div>
+        <div class="input-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-group">
+            <label>Mode de retrait :</label>
+            <input type="radio" id="retrait-depot" name="mode-retrait" value="Retrait dépôt">
+            <label for="retrait-depot">Retrait dépôt</label>
+            <input type="radio" id="livraison-prestataire" name="mode-retrait" value="Livraison prestataire">
+            <label for="livraison-prestataire">Livraison prestataire</label>
+        </div>
+        <div id="ref-cde-container" class="hidden">
+            <div class="input-group">
+                <label for="ref-cde">Numéro référence Cde (obligatoire) :</label>
+                <input type="text" id="ref-cde" name="ref-cde">
+                <div id="ref-cde-error" class="error-message"></div>
+            </div>
+        </div>
+        <div id="article-label-container" class="hidden">
+            <label>Numéro(s) de référence(s) d'article(s) :</label>
+            <div id="articles-container"></div>
+            <button type="button" id="ajouter-article">+</button>
+            <button type="button" id="retirer-article">-</button>
+        </div>
+        <div id="motif-demande-container" class="hidden">
+            <div class="input-group">
+                <label for="motif-demande">Motif de la demande :</label>
+                <textarea id="motif-demande" name="motif-demande" required></textarea>
+                <div id="motif-demande-error" class="error-message"></div> <!-- Élément pour le message d'erreur -->
+            </div>            
+        </div>
+        <div id="photo-facture-container" class="hidden">
+            <div class="input-group">
+                <label for="photo-facture">Joindre la photo de la facture :</label>
+                <input type="file" id="photo-facture" name="photo-facture" accept="image/*">
+                <div id="photo-facture-error" class="error-message"></div>
+            </div>
+        </div>
+        <div id="photos-container" class="hidden">
+            <div class="input-group">
+                <label for="photos">Joindre des photos :</label>
+                <input type="file" id="photos" name="photos" accept="image/*" multiple>
+                <div id="photos-error" class="error-message"></div>
+            </div>
+        </div>
+        <button type="submit" class="hidden" id="submit-btn">Envoyer</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

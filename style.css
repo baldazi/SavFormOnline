@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    color: #000; /* Couleur du texte ajustée selon le nouveau style */
+    overflow-x: hidden;
+    height: 100%;
+    background-image: url("https://www.belhome.com/img/belhome-logo-1568359871.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+/* Utilisation de la classe .card pour le formulaire pour ajouter une ombre et du padding */
+#form-sav {
+    padding: 30px 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: 5px dashed #1C6EA4;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 3px 2px 19px 10px rgba(25,50,66,0.44);
+    background-color: #fff; /* Assurez-vous que le fond est blanc pour une meilleure lisibilité */
+}
+
+/* Adaptation des couleurs et styles des textes et des labels */
+.blue-text {
+    color: #00BCD4; /* Couleur spécifique pour certains textes */
+}
+
+.input-group label,
+.form-control-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Adaptation pour une meilleure visibilité */
+}
+
+/* Styles unifiés pour les champs de saisie, incluant les spécificités du focus */
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"],
+.input-group textarea,
+.input-group input[type="file"],
+input, textarea {
+    width: 100%;
+    padding: 8px 15px;
+    margin: 5px 0px;
+    border-radius: 5px !important;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 18px !important;
+    font-weight: 300;
+}
+
+input:focus, textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400;
+}
+
+/* Styles des boutons, avec transitions pour le survol */
+button[type="submit"],
+#ajouter-article,
+#retirer-article,
+.btn-block {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px !important;
+    font-weight: 400;
+    height: 43px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+#ajouter-article:hover,
+#retirer-article:hover,
+.btn-block:hover {
+    background-color: #005f73;
+    color: #fff !important;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+/* Messages d'erreur adaptés */
+.error-message {
+    color: #d8000c;
+    font-size: 0.85em;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
+
+/* Éléments masqués et conteneur d'articles */
+.hidden {
+    display: none;
+}
+
+#articles-container {
+    margin-bottom: 20px;
+}
